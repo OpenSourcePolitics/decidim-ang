@@ -223,6 +223,14 @@ GIT
       decidim-core
 
 GIT
+  remote: https://github.com/OpenSourcePolitics/decidim-module_cookies
+  revision: 9eafb5e8eea046718c21df596c600240e5399bd0
+  branch: release/0.23.1
+  specs:
+    decidim-cookies (0.23.1)
+      decidim-core (~> 0.23.1)
+
+GIT
   remote: https://github.com/OpenSourcePolitics/decidim-module_phone_authorization_handler
   revision: f30a41df4eb094598ddee1576ccc1fd392aa5735
   branch: release/0.23-stable
@@ -861,6 +869,7 @@ DEPENDENCIES
   dalli
   decidim!
   decidim-conferences!
+  decidim-cookies!
   decidim-dev!
   decidim-navbar_links!
   decidim-phone_authorization_handler!
