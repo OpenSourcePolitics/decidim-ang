@@ -14,9 +14,13 @@ Decidim.configure do |config|
 
   # Change these lines to set your preferred locales
   config.default_locale = :fr
-  config.available_locales = [:en, :fr]
+  config.available_locales = [:fr]
 
   config.maximum_attachment_height_or_width = 6000
+  config.maximum_attachment_size = 10.megabytes
+  config.maximum_attachment_admin_size = 20.megabytes
+
+  config.image_uploader_quality = 95
 
   # Geocoder configuration
   if !Rails.application.secrets.geocoder[:here_api_key].blank?
@@ -93,9 +97,9 @@ Decidim.configure do |config|
 
   if !Rails.application.secrets.etherpad[:server].blank?
     config.etherpad = {
-        server: Rails.application.secrets.etherpad[:server],
-        api_key: Rails.application.secrets.etherpad[:api_key],
-        api_version: Rails.application.secrets.etherpad[:api_version]
+      server: Rails.application.secrets.etherpad[:server],
+      api_key: Rails.application.secrets.etherpad[:api_key],
+      api_version: Rails.application.secrets.etherpad[:api_version]
     }
   end
 
@@ -103,6 +107,8 @@ Decidim.configure do |config|
     config.base_uploads_path = ENV["HEROKU_APP_NAME"] + "/"
   end
 end
+
+Geocoder.configure(:timeout => 10)
 
 Rails.application.config.i18n.available_locales = Decidim.available_locales
 Rails.application.config.i18n.default_locale = Decidim.default_locale
