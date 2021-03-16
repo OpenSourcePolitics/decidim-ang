@@ -337,6 +337,9 @@ fr:
             vote_rule_group_1_maximum_budget_projects_enabled: "Activer la règle de vote : Nombre maximum de projets"
             vote_rule_group_1_minimum_budget_projects_enabled: "Activer la règle de vote : Nombre minimum de projets"
             vote_rule_threshold_percent_enabled: "Activer la règle de vote : Pourcentage du budget"
+      cookies:
+        jsessionid:
+          description: Le cookie JSESSIONID permet de sauvegarder un identifiant de session. Celui-ci est nécessaire pour permettre à New Relic de monitorer la session.
     devise:
       registrations:
         new:
