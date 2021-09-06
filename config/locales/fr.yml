@@ -1,4 +1,8 @@
 fr:
+  forms:
+    length_validator:
+      minimum:
+        other: Autre
   activemodel:
     attributes:
       angers_authorization_handler:
