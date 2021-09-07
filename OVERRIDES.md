@@ -9,3 +9,6 @@ This files have been overridden from their origin repository
 - [app/views/decidim/admin/dashboard/show.html.erb](/app/views/decidim/admin/dashboard/show.html.erb)
   :warning: need to be removed when [#6518](https://github.com/decidim/decidim/pull/6518)
   is merged on [`feature/maximum-number-of-vote-per-project`](https://github.com/OpenSourcePolitics/decidim/tree/feature/maximum-number-of-vote-per-project)
+
+- [lib/decidim/settings_manifest.rb](/lib/decidim/settings_manifest.rb)
+  Add [Configurable default order for proposals](https://github.com/decidim/decidim/pull/8295), shoudl be avalable in 0.25

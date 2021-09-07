@@ -1,0 +1,16 @@
+---
+en:
+  decidim:
+    components:
+      dummy:
+        settings:
+          global:
+            test_options:
+              bar: Bar
+              baz: Baz
+              foo: Foo
+          step:
+            test_options:
+              bar: Bar
+              baz: Baz
+              foo: Foo

@@ -40,7 +40,7 @@ gem "dotenv-rails"
 gem "puma", "~> 5.0"
 gem "uglifier", "~> 4.1"
 
-gem "faker", "~> 1.8"
+gem "faker", "~> 2.18"
 
 gem "ruby-progressbar"
 gem "sentry-raven"
