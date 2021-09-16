@@ -33,7 +33,7 @@ GIT
 
 GIT
   remote: https://github.com/armandfardeau/decidim
-  revision: e1267836e6b97d81d1292502c0d155bf3dff1aaa
+  revision: b5f2f3a1acc0b97a70afee8f787a1001dad2c252
   branch: tmp/configurable_default_order_for_proposals
   specs:
     decidim (0.24.3)
