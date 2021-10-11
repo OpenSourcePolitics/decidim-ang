@@ -1,10 +1,11 @@
+---
 fr:
   activemodel:
     attributes:
       angers_authorization_handler:
+        birthday: Date de naissance
         document_number: Numéro unique
         postal_code: Code postal
-        birthday: Date de naissance
       assembly:
         area_id: Zone d'application
         assembly_type: Type d'agora
@@ -15,9 +16,9 @@ fr:
       meetings:
         decidim_scope_id: Secteur géographique
       osp_authorization_handler:
+        birthday: Date de naissance
         document_number: Numéro unique
         postal_code: Code postal
-        birthday: Date de naissance
       participatory_process:
         participatory_process_group_id: Groupe de participations
         private_space: Espace privé
@@ -33,6 +34,8 @@ fr:
       scope_type: Type de secteur géographique
       scope_type_id: Type de secteur géographique
   decidim:
+    accessibility:
+      skip_button: Skip button
     accountability:
       result:
         filters:
@@ -101,15 +104,16 @@ fr:
           name: Agora
         assembly_user_role:
           name: Utilisateur de l'agora
-        decidim/assembly:
-          one: Agora
-          other: Agora
-        decidim/assembly_member:
-          one: Membre de l'agora
-          other: Membres de l'agora
-        decidim/assembly_user_role:
-          one: Fonction du membre dans l'agora
-          other: Fonctions du membre dans l'agora
+        decidim:
+          assembly:
+            one: Agora
+            other: Agora
+          assembly_member:
+            one: Membre de l'agora
+            other: Membres de l'agora
+          assembly_user_role:
+            one: Fonction du membre dans l'agora
+            other: Fonctions du membre dans l'agora
         participatory_process:
           fields:
             created_at: Créée le
@@ -124,9 +128,6 @@ fr:
           fields:
             name: Titre
             scope_type: Type de secteur géographique
-      participatory_processes:
-        new:
-          title: nouvelle participation
       participatory_process_copies:
         new:
           title: Dupliquer la participation
@@ -208,6 +209,10 @@ fr:
         create:
           error: Une erreur s'est produite lors de la création d'un nouveau groupe de participations.
           success: Groupe de participations créé avec succès.
+      participatory_space_private_users:
+        create:
+          error: Error
+          success: Success
       scope_types:
         create:
           error: Une erreur s'est produite lors de la création d'un nouveau type de secteur géographique.
@@ -254,6 +259,12 @@ fr:
         delete_with_parent: "%{user_name} a supprimé le secteur géographique %{resource_name} à l'intérieur du secteur géographique %{parent_scope}"
         update: "%{user_name} a mis à jour le secteur géographique %{resource_name}"
         update_with_parent: "%{user_name} a mis à jour le secteur géographique %{resource_name} à l'intérieur du secteur géographique %{parent_scope}"
+    amendments:
+      emendation:
+        announcement:
+          evaluating: |-
+            This amendment for %{amendable_type} %{proposal_link}
+            is in evaluation state.
     application:
       documents:
         related_documents: Documents à consulter
@@ -281,18 +292,18 @@ fr:
       angers_authorization_handler:
         explanation: Vérifier votre identité en saisissant un numéro unique
         fields:
+          birthday: Date de naissance
           document_number: Numéro unique
           postal_code: Code postal
-          birthday: Date de naissance
         name: Formulaire de vérification d'identité - Ville d'Angers
       angers_authorization_workflow:
         name: Procédure d'autorisation
       osp_authorization_handler:
         explanation: Vérifier votre identité en saisissant un numéro unique
         fields:
+          birthday: Date de naissance
           document_number: Numéro unique
           postal_code: Code postal
-          birthday: Date de naissance
         name: Formulaire de vérification d'identité - Ville d'Angers
       osp_authorization_workflow:
         name: Procédure d'autorisation
@@ -311,14 +322,10 @@ fr:
         budget_summary:
           cancel_order: supprimer votre vote et recommencer
           checked_out:
-            description: Vous avez déjà voté. Si vous avez changé d'avis, vous pouvez
-              %{cancel_link}.
+            description: Vous avez déjà voté. Si vous avez changé d'avis, vous pouvez %{cancel_link}.
             title: Vote terminé
-          description_per_budget: Sélectionnez les projets que vous souhaitez voir
-            être réalisés puis confirmez votre choix. Les projets choisis doivent
-            atteindre le montant minimum cumulé de %{minimum_budget}.
-          description_per_project: Faîtes votre choix puis confirmez le. Vous devez
-            choisir %{minimum_project} projet(s).
+          description_per_budget: Sélectionnez les projets que vous souhaitez voir être réalisés puis confirmez votre choix. Les projets choisis doivent atteindre le montant minimum cumulé de %{minimum_budget}.
+          description_per_project: Faîtes votre choix puis confirmez le. Vous devez choisir %{minimum_project} projet(s).
           maximum_and_minimum_projects_rule:
             description: Description
             instruction: Instructions
@@ -334,9 +341,9 @@ fr:
         settings:
           global:
             vote_per_category: Activer le "Vote par catégorie requise"
-            vote_rule_group_1_maximum_budget_projects_enabled: "Activer la règle de vote : Nombre maximum de projets"
-            vote_rule_group_1_minimum_budget_projects_enabled: "Activer la règle de vote : Nombre minimum de projets"
-            vote_rule_threshold_percent_enabled: "Activer la règle de vote : Pourcentage du budget"
+            vote_rule_group_1_maximum_budget_projects_enabled: 'Activer la règle de vote : Nombre maximum de projets'
+            vote_rule_group_1_minimum_budget_projects_enabled: 'Activer la règle de vote : Nombre minimum de projets'
+            vote_rule_threshold_percent_enabled: 'Activer la règle de vote : Pourcentage du budget'
       cookies:
         jsessionid:
           description: Le cookie JSESSIONID permet de sauvegarder un identifiant de session. Celui-ci est nécessaire pour permettre à New Relic de monitorer la session.
@@ -346,13 +353,19 @@ fr:
           sign_up_as:
             user: Citoyen
           subtitle: Inscrivez-vous pour participer et débattre sur la plateforme.
+    events:
+      budgets:
+        pending_order:
+          email_intro: Le vote sur le budget "%{resource_title}" n'est pas encore finalisé sur la concertation "%{participatory_space_title}".
+          email_outro: Vous avez reçu cette notification parce que vous avez commencé à voter sur la concertation "%{participatory_space_title}"
+          email_subject: Votre vote est toujours en attente sur la concertation %{participatory_space_title}
+          notification_title: Votre vote pour le budget <a href="%{resource_path}">%{resource_title}</a> attend d'être finalisé sur la concertation %{participatory_space_title}
     menu:
-      assemblies: Agora
-      processes: Participations en cours
       assemblies: Donnez-nous votre avis
+      processes: Participations en cours
     participatory_process_groups:
       show:
-        group_participatory_processes: 'Participations pour %{group}'
+        group_participatory_processes: Participations pour %{group}
         title: Groupes de participations
     participatory_process_steps:
       index:
@@ -388,13 +401,6 @@ fr:
       global: Toute la ville
       prompt: Sélectionnez un secteur géographique
       scopes: Secteur géographique
-    events:
-      budgets:
-        pending_order:
-          email_intro: Le vote sur le budget "%{resource_title}" n'est pas encore finalisé sur la concertation "%{participatory_space_title}".
-          email_outro: Vous avez reçu cette notification parce que vous avez commencé à voter sur la concertation "%{participatory_space_title}"
-          email_subject: Votre vote est toujours en attente sur la concertation %{participatory_space_title}
-          notification_title: Votre vote pour le budget <a href="%{resource_path}">%{resource_title}</a> attend d'être finalisé sur la concertation %{participatory_space_title}
     verifications:
       authorizations:
         first_login:
@@ -422,25 +428,36 @@ fr:
           promoted_assemblies: Agora mise en avant
         order_by_assemblies:
           assemblies:
-            one: '%{count} agora'
-            other: '%{count} agora'
+            one: "%{count} agora"
+            other: "%{count} agora"
       assembly_header:
         assembly_menu_item: Présentation
       footer:
         download_open_data: Données ouvertes
+        made_with_open_source: Website made by <a target="_blank" href="https://opensourcepolitics.eu/en/">Open Source Politics</a> with the <a target="_blank" href="https://github.com/decidim/decidim">decidim free software</a>.
+        revoke_cookies: Revoke cookies
+      header:
+        close_menu: Close menu
+        navigation: Navigation
+        sign_in: Sign in
+        sign_up: Sign up
       participatory_processes:
         index:
           promoted_processes: Participations mises en avant
         order_by_processes:
           processes:
-            one: '%{count} participation'
-            other: '%{count} participations'
+            one: "%{count} participation"
+            other: "%{count} participations"
       process_header:
         process_menu_item: Présentation
+      user_menu:
+        account: Account
+        conversations: Conversations
+        notifications: Notifications
   pages:
     home:
       extended:
         how_to_participate: Comment participer ?
       statistics:
-        processes_count: Participations
         assemblies_count: Agora
+        processes_count: Participations

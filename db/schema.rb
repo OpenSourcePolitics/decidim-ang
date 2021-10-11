@@ -530,9 +530,6 @@ ActiveRecord::Schema.define(version: 2021_09_16_182656) do
     t.string "main_logo"
     t.date "sign_date"
     t.datetime "diploma_sent_at"
-    t.jsonb "custom_link_name"
-    t.string "custom_link_url"
-    t.boolean "custom_link_enabled", default: false
     t.integer "follows_count", default: 0, null: false
     t.index ["decidim_organization_id", "slug"], name: "index_unique_conference_slug_and_organization", unique: true
     t.index ["decidim_organization_id"], name: "index_decidim_conferences_on_decidim_organization_id"
@@ -1141,7 +1138,6 @@ ActiveRecord::Schema.define(version: 2021_09_16_182656) do
     t.datetime "updated_at", null: false
     t.boolean "active", default: false
     t.integer "position"
-    t.jsonb "action_btn_text"
     t.jsonb "cta_text", default: {}
     t.string "cta_path"
     t.index ["decidim_participatory_process_id", "active"], name: "unique_index_to_avoid_duplicate_active_steps", unique: true, where: "(active = true)"

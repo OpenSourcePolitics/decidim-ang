@@ -14,12 +14,12 @@ data:
 
   # Locale files or `File.find` patterns where translations are read from:
   read:
-    - config/locales/%{locale}.yml
+  - config/locales/%{locale}.yml
 
   # Locale files to write new keys to, based on a list of key pattern => file rules. Matched from top to bottom:
   # `i18n-tasks normalize -p` will force move the keys according to these rules
   write:
-    - config/locales/%{locale}.yml
+  - config/locales/%{locale}.yml
 
   ## Specify the router (see Readme for details). Valid values: conservative_router, pattern_router, or a custom class.
   # router: convervative_router
@@ -41,25 +41,25 @@ data:
 search:
   ## Paths or `File.find` patterns to search in:
   paths:
-    - app
-    - lib
+  - app
+  - lib
 
   # Root directories for relative keys resolution.
   relative_roots:
-    - app/controllers
-    - app/helpers
-    - app/mailers
-    - app/presenters
-    - app/services
-    - app/views
-    - app/cells
+  - app/controllers
+  - app/helpers
+  - app/mailers
+  - app/presenters
+  - app/services
+  - app/views
+  - app/cells
 
   ## Files or `File.fnmatch` patterns to exclude from search. Some files are always excluded regardless of this setting:
   ##   %w(*.jpg *.png *.gif *.svg *.ico *.eot *.otf *.ttf *.woff *.woff2 *.pdf *.css *.sass *.scss *.less *.yml *.json)
   exclude:
-    - "*.jpeg"
-    - "*.odt"
-    - "*.docx"
+  - "*.jpeg"
+  - "*.odt"
+  - "*.docx"
 
   ## Alternatively, the only files or `File.fnmatch patterns` to search in `paths`:
   ## If specified, this settings takes priority over `exclude`, but `exclude` still applies.
@@ -95,6 +95,229 @@ ignore_unused:
   - activemodel.attributes.participatory_process.private_space
   - decidim.amendments.emendation.announcement.evaluating
   - decidim.events.budgets.pending_order.*
-
-
-
+  - activemodel.attributes.angers_authorization_handler.birthday
+  - activemodel.attributes.angers_authorization_handler.document_number
+  - activemodel.attributes.angers_authorization_handler.postal_code
+  - activemodel.attributes.assembly.area_id
+  - activemodel.attributes.assembly.assembly_type
+  - activemodel.attributes.assembly.assembly_type_other
+  - activemodel.attributes.assembly.decidim_scope_id
+  - activemodel.attributes.assembly.scope_id
+  - activemodel.attributes.assembly.scopes_enabled
+  - activemodel.attributes.meetings.decidim_scope_id
+  - activemodel.attributes.participatory_process.participatory_process_group_id
+  - activemodel.attributes.participatory_process.promoted
+  - activemodel.attributes.participatory_process_group.participatory_process_ids
+  - activemodel.attributes.project.decidim_scope_id
+  - activemodel.attributes.proposal.scope_id
+  - activemodel.attributes.result.decidim_scope_id
+  - activemodel.attributes.scope_type
+  - activemodel.attributes.scope_type_id
+  - decidim.accessibility.skip_button
+  - decidim.accountability.result.filters.scopes
+  - decidim.admin.actions.new_assembly
+  - decidim.admin.assemblies.create.error
+  - decidim.admin.assemblies.create.success
+  - decidim.admin.assemblies.destroy.success
+  - decidim.admin.assemblies.new.title
+  - decidim.admin.assemblies.update.error
+  - decidim.admin.assemblies.update.success
+  - decidim.admin.assembly_members.create.error
+  - decidim.admin.assembly_members.create.success
+  - decidim.admin.assembly_members.destroy.success
+  - decidim.admin.assembly_members.edit.title
+  - decidim.admin.assembly_members.edit.update
+  - decidim.admin.assembly_members.index.assembly_members_title
+  - decidim.admin.assembly_members.new.create
+  - decidim.admin.assembly_members.new.title
+  - decidim.admin.assembly_members.update.error
+  - decidim.admin.assembly_members.update.success
+  - decidim.admin.assembly_publications.create.success
+  - decidim.admin.assembly_publications.destroy.success
+  - decidim.admin.assembly_user_roles.create.error
+  - decidim.admin.assembly_user_roles.create.success
+  - decidim.admin.assembly_user_roles.destroy.success
+  - decidim.admin.assembly_user_roles.edit.title
+  - decidim.admin.assembly_user_roles.edit.update
+  - decidim.admin.assembly_user_roles.index.assembly_admins_title
+  - decidim.admin.assembly_user_roles.new.create
+  - decidim.admin.assembly_user_roles.new.title
+  - decidim.admin.assembly_user_roles.update.error
+  - decidim.admin.assembly_user_roles.update.success
+  - decidim.admin.menu.participatory_process_groups
+  - decidim.admin.menu.participatory_processes
+  - decidim.admin.menu.participatory_processes_submenu.process_admins
+  - decidim.admin.menu.scope_types
+  - decidim.admin.models.assembly.name
+  - decidim.admin.models.assembly_user_role.name
+  - decidim.admin.models.participatory_process.fields.created_at
+  - decidim.admin.models.participatory_process.fields.promoted
+  - decidim.admin.models.participatory_process.fields.published
+  - decidim.admin.models.participatory_process.name
+  - decidim.admin.models.participatory_process_group.name
+  - decidim.admin.models.participatory_process_user_role.name
+  - decidim.admin.models.scope.fields.name
+  - decidim.admin.models.scope.fields.scope_type
+  - decidim.admin.participatory_process_copies.new.title
+  - decidim.admin.participatory_process_groups.destroy.success
+  - decidim.admin.participatory_process_groups.edit.title
+  - decidim.admin.participatory_process_groups.new.title
+  - decidim.admin.participatory_process_groups.update.error
+  - decidim.admin.participatory_process_groups.update.success
+  - decidim.admin.participatory_process_publications.create.error
+  - decidim.admin.participatory_process_publications.create.success
+  - decidim.admin.participatory_process_publications.destroy.error
+  - decidim.admin.participatory_process_publications.destroy.success
+  - decidim.admin.participatory_process_step_activations.create.error
+  - decidim.admin.participatory_process_step_activations.create.success
+  - decidim.admin.participatory_process_steps.create.error
+  - decidim.admin.participatory_process_steps.create.success
+  - decidim.admin.participatory_process_steps.default_title
+  - decidim.admin.participatory_process_steps.destroy.error.active_step
+  - decidim.admin.participatory_process_steps.destroy.error.last_step
+  - decidim.admin.participatory_process_steps.destroy.success
+  - decidim.admin.participatory_process_steps.edit.title
+  - decidim.admin.participatory_process_steps.index.steps_title
+  - decidim.admin.participatory_process_steps.new.title
+  - decidim.admin.participatory_process_steps.ordering.error
+  - decidim.admin.participatory_process_steps.update.error
+  - decidim.admin.participatory_process_steps.update.success
+  - decidim.admin.participatory_process_user_roles.create.error
+  - decidim.admin.participatory_process_user_roles.create.success
+  - decidim.admin.participatory_process_user_roles.destroy.success
+  - decidim.admin.participatory_process_user_roles.edit.title
+  - decidim.admin.participatory_process_user_roles.index.process_admins_title
+  - decidim.admin.participatory_process_user_roles.new.title
+  - decidim.admin.participatory_process_user_roles.update.error
+  - decidim.admin.participatory_process_user_roles.update.success
+  - decidim.admin.participatory_processes.create.error
+  - decidim.admin.participatory_processes.create.success
+  - decidim.admin.participatory_processes.destroy.success
+  - decidim.admin.participatory_processes.index.not_published
+  - decidim.admin.participatory_processes.index.published
+  - decidim.admin.participatory_processes.index.title
+  - decidim.admin.participatory_processes.update.error
+  - decidim.admin.participatory_processes.update.success
+  - decidim.admin.participatory_processes_copies.create.error
+  - decidim.admin.participatory_processes_copies.create.success
+  - decidim.admin.participatory_processes_group.create.error
+  - decidim.admin.participatory_processes_group.create.success
+  - decidim.admin.scope_types.create.error
+  - decidim.admin.scope_types.create.success
+  - decidim.admin.scope_types.destroy.success
+  - decidim.admin.scope_types.edit.title
+  - decidim.admin.scope_types.edit.update
+  - decidim.admin.scope_types.new.create
+  - decidim.admin.scope_types.new.title
+  - decidim.admin.scope_types.update.error
+  - decidim.admin.scope_types.update.success
+  - decidim.admin.scopes.create.error
+  - decidim.admin.scopes.create.success
+  - decidim.admin.scopes.destroy.success
+  - decidim.admin.scopes.edit.title
+  - decidim.admin.scopes.edit.update
+  - decidim.admin.scopes.new.create
+  - decidim.admin.scopes.new.title
+  - decidim.admin.scopes.no_scopes
+  - decidim.admin.scopes.update.error
+  - decidim.admin.scopes.update.success
+  - decidim.admin.titles.assemblies
+  - decidim.admin.titles.navbar_links
+  - decidim.admin.titles.participatory_process_groups
+  - decidim.admin.titles.participatory_processes
+  - decidim.admin.titles.scope_types
+  - decidim.admin.titles.scopes
+  - decidim.admin_log.scope.create
+  - decidim.admin_log.scope.create_with_parent
+  - decidim.admin_log.scope.delete
+  - decidim.admin_log.scope.delete_with_parent
+  - decidim.admin_log.scope.update
+  - decidim.admin_log.scope.update_with_parent
+  - decidim.application.documents.related_documents
+  - decidim.assemblies.admin.assemblies.form.duration_help
+  - decidim.assemblies.admin.assemblies.form.included_at_help
+  - decidim.assemblies.admin.assemblies.form.select_an_assembly_type
+  - decidim.assemblies.index.title
+  - decidim.assemblies.pages.home.highlighted_assemblies.active_assemblies
+  - decidim.assemblies.pages.home.highlighted_assemblies.see_all_assemblies
+  - decidim.assemblies.show.assembly_type
+  - decidim.assemblies.show.children
+  - decidim.assemblies.show.private_space
+  - decidim.assemblies.statistics.assemblies_count
+  - decidim.authorization_handlers.angers_authorization_handler.explanation
+  - decidim.authorization_handlers.angers_authorization_handler.fields.birthday
+  - decidim.authorization_handlers.angers_authorization_handler.fields.document_number
+  - decidim.authorization_handlers.angers_authorization_handler.fields.postal_code
+  - decidim.authorization_handlers.angers_authorization_handler.name
+  - decidim.authorization_handlers.angers_authorization_workflow.name
+  - decidim.budgets.projects.budget_excess.budget_excess.description
+  - decidim.budgets.projects.budget_excess.budget_excess.title
+  - decidim.budgets.projects.budget_excess.close
+  - decidim.budgets.projects.budget_excess.description
+  - decidim.budgets.projects.budget_excess.ok
+  - decidim.budgets.projects.budget_excess.projects_excess.description
+  - decidim.budgets.projects.budget_excess.projects_excess.title
+  - decidim.budgets.projects.budget_summary.cancel_order
+  - decidim.budgets.projects.budget_summary.checked_out.description
+  - decidim.budgets.projects.budget_summary.checked_out.title
+  - decidim.budgets.projects.budget_summary.description_per_budget
+  - decidim.budgets.projects.budget_summary.description_per_project
+  - decidim.budgets.projects.budget_summary.maximum_and_minimum_projects_rule.description
+  - decidim.budgets.projects.budget_summary.maximum_and_minimum_projects_rule.instruction
+  - decidim.budgets.projects.budget_summary.maximum_projects_rule.description
+  - decidim.budgets.projects.budget_summary.maximum_projects_rule.instruction
+  - decidim.budgets.projects.budget_summary.rules.title
+  - decidim.budgets.projects.budget_summary.title
+  - decidim.budgets.projects.budget_summary.total_projects
+  - decidim.components.budgets.settings.global.vote_per_category
+  - decidim.components.budgets.settings.global.vote_rule_group_1_maximum_budget_projects_enabled
+  - decidim.components.budgets.settings.global.vote_rule_group_1_minimum_budget_projects_enabled
+  - decidim.components.budgets.settings.global.vote_rule_threshold_percent_enabled
+  - decidim.components.cookies.jsessionid.description
+  - decidim.devise.registrations.new.sign_up_as.user
+  - decidim.devise.registrations.new.subtitle
+  - decidim.menu.assemblies
+  - decidim.menu.processes
+  - decidim.participatory_process_groups.show.group_participatory_processes
+  - decidim.participatory_process_groups.show.title
+  - decidim.participatory_process_steps.index.process_steps
+  - decidim.participatory_process_steps.index.title
+  - decidim.participatory_processes.admin.participatory_process_copies.form.slug_help
+  - decidim.participatory_processes.admin.participatory_processes.form.slug_help
+  - decidim.participatory_processes.index.title
+  - decidim.participatory_processes.order_by_processes.active
+  - decidim.participatory_processes.order_by_processes.all
+  - decidim.participatory_processes.order_by_processes.past
+  - decidim.participatory_processes.pages.home.highlighted_processes.active_processes
+  - decidim.participatory_processes.pages.home.highlighted_processes.see_all_processes
+  - decidim.participatory_processes.statistics.processes_count
+  - decidim.proposals.models.proposal.fields.scope
+  - decidim.scopes.global
+  - decidim.scopes.prompt
+  - decidim.scopes.scopes
+  - decidim.verifications.authorizations.first_login.actions.angers_authorization_handler
+  - decidim.verifications.authorizations.first_login.actions.angers_authorization_workflow
+  - devise.failure.user.already_authenticated
+  - devise.failure.user.inactive
+  - devise.failure.user.invalid
+  - devise.failure.user.invited
+  - devise.failure.user.last_attempt
+  - devise.failure.user.locked
+  - devise.failure.user.not_found_in_database
+  - devise.failure.user.timeout
+  - devise.failure.user.unauthenticated
+  - layouts.decidim.assemblies.index.promoted_assemblies
+  - layouts.decidim.assemblies.order_by_assemblies.assemblies
+  - layouts.decidim.assembly_header.assembly_menu_item
+  - layouts.decidim.participatory_processes.index.promoted_processes
+  - layouts.decidim.participatory_processes.order_by_processes.processes
+  - layouts.decidim.process_header.process_menu_item
+  - layouts.decidim.user_menu.account
+  - pages.home.extended.how_to_participate
+  - pages.home.statistics.assemblies_count
+  - pages.home.statistics.processes_count
+  - decidim.admin.models.decidim.assembly.*
+  - decidim.admin.models.decidim.assembly_member.*
+  - decidim.admin.models.decidim.assembly_user_role.*
+  - layouts.decidim.assemblies.order_by_assemblies.assemblies.*
+  - layouts.decidim.participatory_processes.order_by_processes.processes.*
