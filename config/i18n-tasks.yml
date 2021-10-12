@@ -306,6 +306,7 @@ ignore_unused:
   - devise.failure.user.not_found_in_database
   - devise.failure.user.timeout
   - devise.failure.user.unauthenticated
+  - forms.length_validator.minimum
   - layouts.decidim.assemblies.index.promoted_assemblies
   - layouts.decidim.assemblies.order_by_assemblies.assemblies
   - layouts.decidim.assembly_header.assembly_menu_item

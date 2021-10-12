@@ -435,6 +435,10 @@ en:
       - EN7
       - EN8
       - EN9
+  forms:
+    length_validator:
+      minimum:
+        other: At least %{count} characters
   layouts:
     decidim:
       assemblies:
