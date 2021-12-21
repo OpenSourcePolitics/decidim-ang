@@ -349,7 +349,6 @@ fr:
     menu:
       assemblies: Agora
       processes: Participations en cours
-      assemblies: Donnez-nous votre avis
     participatory_process_groups:
       show:
         group_participatory_processes: 'Participations pour %{group}'
