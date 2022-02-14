@@ -330,6 +330,33 @@ fr:
           title: Vous décidez du budget
           total_projects: Total de projets
     components:
+      proposals:
+        settings:
+          step:
+            default_sort_order: Tri des propositions par défaut
+            default_sort_order_options:
+              default: Par défaut
+              random: Aléatoire
+              recent: Les plus récentes
+              most_endorsed: Les plus soutenues
+              most_voted: Les plus votées
+              most_commented: Les plus commentées
+              most_followed: Les plus suivies
+              with_more_authors: Avec le plus d'auteurs
+          global:
+            default_sort_order: Tri des propositions par défaut
+            default_sort_order_options:
+              default: Par défaut
+              random: Aléatoire
+              recent: Les plus récentes
+              most_endorsed: Les plus soutenues
+              most_voted: Les plus votées
+              most_commented: Les plus commentées
+              most_followed: Les plus suivies
+              with_more_authors: Avec le plus d'auteurs
+            proposal_edit_time: Durée d'édition des propositions
+            proposal_edit_time_choices:
+              infinite: Autoriser l'édition des propositions pour une durée infinie
       budgets:
         settings:
           global:
