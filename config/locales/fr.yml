@@ -1,469 +1,98 @@
+---
 fr:
   activemodel:
     attributes:
-      angers_authorization_handler:
-        document_number: Numéro unique
-        postal_code: Code postal
-        birthday: Date de naissance
-      assembly:
-        area_id: Zone d'application
-        assembly_type: Type d'agora
-        assembly_type_other: Autre type d'agora
-        decidim_scope_id: Secteur géographique
-        scope_id: Secteur géographique
-        scopes_enabled: Secteur géographiques géographiques activés
-      meetings:
-        decidim_scope_id: Secteur géographique
       osp_authorization_handler:
+        birthday: Date de naissance
         document_number: Numéro unique
         postal_code: Code postal
-        birthday: Date de naissance
       participatory_process:
-        participatory_process_group_id: Groupe de participations
         private_space: Espace privé
-        promoted: Mise en avant
-      participatory_process_group:
-        participatory_process_ids: Participations liées
-      project:
-        decidim_scope_id: Secteur géographique
-      proposal:
-        scope_id: Secteur géographique
-      result:
-        decidim_scope_id: Secteur géographique
-      scope_type: Type de secteur géographique
-      scope_type_id: Type de secteur géographique
   decidim:
-    accountability:
-      result:
-        filters:
-          scopes: Secteur géographique
+    accessibility:
+      skip_button: Skip button
     admin:
-      actions:
-        new_assembly: Nouvelle agora
-      assemblies:
+      participatory_space_private_users:
         create:
-          error: Une erreur s'est produite lors de la création d'une nouvelle agora.
-          success: Agora créée avec succès.
-        destroy:
-          success: Agora supprimée avec succès.
-        new:
-          title: Nouvelle agora
-        update:
-          error: Une erreur s'est produite lors de la duplication de cette agora.
-          success: Agora mise à jour avec succès.
-      assembly_members:
-        create:
-          error: Une erreur s'est produite lors de l'ajout d'un membre pour cette agora.
-          success: Membre créé avec succès pour cette agora.
-        destroy:
-          success: Membre supprimé avec succès pour cette agora.
-        edit:
-          title: Mettre à jour le membre de l'agora.
-          update: Mettre à jour
-        index:
-          assembly_members_title: Membres de l'agora
-        new:
-          create: Créer
-          title: Nouveau membre de l'agora.
-        update:
-          error: Une erreur s'est produite lors de la mise à jour du membre de cette agora.
-          success: Membre mis à jour avec succès pour cette agora.
-      assembly_publications:
-        create:
-          success: Agora publiée avec succès.
-        destroy:
-          success: Agora dépubliée avec succès.
-      assembly_user_roles:
-        create:
-          error: Une erreur s'est produite lors de l'ajout d'un utilisateur pour cette agora.
-          success: Utilisateur ajouté avec succès à cette agora.
-        destroy:
-          success: Utilisateur supprimé avec succès de cette agora.
-        edit:
-          title: Mettre à jour l'utilisateur de l'agora.
-          update: Mettre à jour
-        index:
-          assembly_admins_title: Administrateurs de l'agora
-        new:
-          create: Créer
-          title: Nouvel utilisateur de l'agora.
-        update:
-          error: Une erreur s'est produite lors de la mise à jour d'un utilisateur pour cette agora.
-          success: Utilisateur mis à jour avec succès pour cette agora.
-      menu:
-        participatory_process_groups: Groupes de participations
-        participatory_processes: Participations
-        participatory_processes_submenu:
-          process_admins: Administrateurs de la participation
-        scope_types: Types de secteur géographique
-      models:
-        assembly:
-          name: Agora
-        assembly_user_role:
-          name: Utilisateur de l'agora
-        decidim/assembly:
-          one: Agora
-          other: Agora
-        decidim/assembly_member:
-          one: Membre de l'agora
-          other: Membres de l'agora
-        decidim/assembly_user_role:
-          one: Fonction du membre dans l'agora
-          other: Fonctions du membre dans l'agora
-        participatory_process:
-          fields:
-            created_at: Créée le
-            promoted: Mise en évidence
-            published: Publiée
-          name: Participation
-        participatory_process_group:
-          name: Groupes de participations
-        participatory_process_user_role:
-          name: Rôle utilisateur de la participation
-        scope:
-          fields:
-            name: Titre
-            scope_type: Type de secteur géographique
-      participatory_processes:
-        new:
-          title: nouvelle participation
-      participatory_process_copies:
-        new:
-          title: Dupliquer la participation
-      participatory_process_groups:
-        destroy:
-          success: Le groupe de participations a été détruit avec succès.
-        edit:
-          title: Modifier le groupe de participations
-        new:
-          title: Nouveau groupe de participations
-        update:
-          error: Il y a eu une erreur lors de la mise à jour de ce groupe de participations.
-          success: Groupe de participations mis à jour avec succès.
-      participatory_process_publications:
-        create:
-          error: Une erreur s'est produite lors de la publication de cette participation.
-          success: Participation publiée avec succès.
-        destroy:
-          error: Une erreur s'est produite lors de la publication de cette participation.
-          success: Participation supprimée avec succès.
-      participatory_process_step_activations:
-        create:
-          error: Une erreur s'est produite lors de l'activation de cette étape de la participation.
-          success: Etape de la participation activée avec succès.
-      participatory_process_steps:
-        create:
-          error: Une erreur s'est produite lors de la création d'une nouvelle étape de la participation.
-          success: Etape de la participation créée avec succès.
-        default_title: Introduction
-        destroy:
-          error:
-            active_step: Vous ne pouvez pas supprimer l'étape active de la participation.
-            last_step: Vous ne pouvez pas supprimer la dernière étape d'une participation.
-          success: L'étape de la participation a été supprimée avec succès.
-        edit:
-          title: Modifier l'étape de la participation
-        index:
-          steps_title: Etapes
-        new:
-          title: Nouvelle étape de la participation
-        ordering:
-          error: Une erreur s'est produite lors de la réorganisation des étapes de la participation.
-        update:
-          error: Une erreur s'est produite lors de la mise à jour de cette étape de la participation.
-          success: Etape de la participation mise à jour avec succès.
-      participatory_process_user_roles:
-        create:
-          error: Une erreur s'est produite lors de l'ajout d'un utilisateur pour cette participation.
-          success: Utilisateur créé avec succès pour cette participation.
-        destroy:
-          success: L'utilisateur a été supprimé avec succès pour cette participation.
-        edit:
-          title: Mettre à jour l'utilisateur de la participation.
-        index:
-          process_admins_title: Administrateurs de la participation
-        new:
-          title: Nouvel utilisateur de la participation.
-        update:
-          error: Une erreur s'est produite lors de la mise à jour d'un utilisateur pour cette participation.
-          success: L'utilisateur a été mis à jour avec succès pour cette participation.
-      participatory_processes:
-        create:
-          error: Une erreur s'est produite lors de la création d'une nouvelle participation.
-          success: Participation créée avec succès. Configurez maintenant ses étapes.
-        destroy:
-          success: Participation supprimée avec succès.
-        index:
-          not_published: Non publiée
-          published: Publiée
-          title: Nouvelle participation
-        update:
-          error: Une erreur s'est produite lors de la mise à jour de cette participation.
-          success: Participation mise à jour avec succès.
-      participatory_processes_copies:
-        create:
-          error: Une erreur s'est produite lors de la duplication de cette participation.
-          success: Participation dupliquée avec succès.
-      participatory_processes_group:
-        create:
-          error: Une erreur s'est produite lors de la création d'un nouveau groupe de participations.
-          success: Groupe de participations créé avec succès.
-      scope_types:
-        create:
-          error: Une erreur s'est produite lors de la création d'un nouveau type de secteur géographique.
-          success: Type de secteur géographique créé avec succès.
-        destroy:
-          success: Le type de secteur géographique a été supprimé avec succès
-        edit:
-          title: Modifier le type de secteur géographique
-          update: Mettre à jour
-        new:
-          create: Créer un type de secteur géographique
-          title: Nouveau secteur géographique
-        update:
-          error: Une erreur s'est produite lors de la mise à jour de ce secteur géographique.
-          success: Type de secteur géographique mis à jour avec succès
-      scopes:
-        create:
-          error: Une erreur s'est produite lors de la création d'un nouveau périmètre d’application.
-          success: Secteur géographique créé avec succès.
-        destroy:
-          success: Secteur géographique supprimé avec succès
-        edit:
-          title: Modifier le secteur géographique
-          update: Mettre à jour
-        new:
-          create: Créer un secteur géographique
-          title: Nouveau secteur géographique
-        no_scopes: Pas de secteur géographique à ce niveau.
-        update:
-          error: Une erreur s'est produite lors de la mise à jour de ce secteur géographique.
-          success: Secteur géographique mis à jour avec succès
-      titles:
-        assemblies: Agora
-        navbar_links: Liens de navigation
-        participatory_process_groups: Groupes de participations
-        participatory_processes: Participations
-        scope_types: Types de secteur géographique
-        scopes: Secteur géographiques géographiques
-    admin_log:
-      scope:
-        create: "%{user_name} a créé le secteur géographique %{resource_name}"
-        create_with_parent: "%{user_name} a créé le secteur géographique %{resource_name} à l'intérieur du secteur géographique %{parent_scope}"
-        delete: "%{user_name} a supprimé le secteur géographique %{resource_name}"
-        delete_with_parent: "%{user_name} a supprimé le secteur géographique %{resource_name} à l'intérieur du secteur géographique %{parent_scope}"
-        update: "%{user_name} a mis à jour le secteur géographique %{resource_name}"
-        update_with_parent: "%{user_name} a mis à jour le secteur géographique %{resource_name} à l'intérieur du secteur géographique %{parent_scope}"
-    application:
-      documents:
-        related_documents: Documents à consulter
-    assemblies:
-      admin:
-        assemblies:
-          form:
-            duration_help: Si la durée de cette agora est limitée, sélectionnez la date de fin. Sinon sa durée ne sera pas limitée.
-            included_at_help: Sélectionnez la date à laquelle cette agora a été ajoutée à Decidim. Elle ne doit pas nécessairement être identique à la date de création.
-            select_an_assembly_type: Sélectionnez un type d'agora
-      index:
-        title: Agora
-      pages:
-        home:
-          highlighted_assemblies:
-            active_assemblies: Agora
-            see_all_assemblies: Voir toutes les agora
-      show:
-        assembly_type: Type d'agora
-        children: Agora
-        private_space: Ceci est une agora privée
-      statistics:
-        assemblies_count: Agora
+          error: Error
+          success: Success
+    amendments:
+      emendation:
+        announcement:
+          evaluating: |-
+            This amendment for %{amendable_type} %{proposal_link}
+            is in evaluation state.
     authorization_handlers:
-      angers_authorization_handler:
-        explanation: Vérifier votre identité en saisissant un numéro unique
-        fields:
-          document_number: Numéro unique
-          postal_code: Code postal
-          birthday: Date de naissance
-        name: Formulaire de vérification d'identité - Ville d'Angers
-      angers_authorization_workflow:
-        name: Procédure d'autorisation
       osp_authorization_handler:
         explanation: Vérifier votre identité en saisissant un numéro unique
         fields:
+          birthday: Date de naissance
           document_number: Numéro unique
           postal_code: Code postal
-          birthday: Date de naissance
         name: Formulaire de vérification d'identité - Ville d'Angers
       osp_authorization_workflow:
         name: Procédure d'autorisation
-    budgets:
-      projects:
-        budget_excess:
-          budget_excess:
-            description: Ce projet dépasse le budget maximum et ne peut pas être ajouté. Si vous le souhaitez, vous pouvez supprimer un projet que vous avez déjà sélectionné pour l'ajouter, ou voter en fonction de vos préférences.
-            title: Budget maximum dépassé
-          close: Fermer
-          description: Ce projet dépasse le budget maximum et ne peut pas être ajouté. Si vous le souhaitez, vous pouvez supprimer un projet que vous avez déjà sélectionné pour l'ajouter, ou voter en fonction de vos préférences.
-          ok: OK
-          projects_excess:
-            description: Ce projet dépasse le nombre maximum de projets et ne peut être ajouté. Si vous le souhaitez, vous pouvez supprimer un projet que vous avez déjà sélectionné pour l'ajouter, ou voter en fonction de vos préférences.
-            title: Nombre maximum de projets dépassé
-        budget_summary:
-          cancel_order: supprimer votre vote et recommencer
-          checked_out:
-            description: Vous avez déjà voté. Si vous avez changé d'avis, vous pouvez
-              %{cancel_link}.
-            title: Vote terminé
-          description_per_budget: Sélectionnez les projets que vous souhaitez voir
-            être réalisés puis confirmez votre choix. Les projets choisis doivent
-            atteindre le montant minimum cumulé de %{minimum_budget}.
-          description_per_project: Faîtes votre choix puis confirmez le. Vous devez
-            choisir %{minimum_project} projet(s).
-          maximum_and_minimum_projects_rule:
-            description: Description
-            instruction: Instructions
-          maximum_projects_rule:
-            description: Description
-            instruction: Instructions
-          rules:
-            title: Titre
-          title: Vous décidez du budget
-          total_projects: Total de projets
-    components:
-      proposals:
-        settings:
-          step:
-            default_sort_order: Tri des propositions par défaut
-            default_sort_order_options:
-              default: Par défaut
-              random: Aléatoire
-              recent: Les plus récentes
-              most_endorsed: Les plus soutenues
-              most_voted: Les plus votées
-              most_commented: Les plus commentées
-              most_followed: Les plus suivies
-              with_more_authors: Avec le plus d'auteurs
-          global:
-            default_sort_order: Tri des propositions par défaut
-            default_sort_order_options:
-              default: Par défaut
-              random: Aléatoire
-              recent: Les plus récentes
-              most_endorsed: Les plus soutenues
-              most_voted: Les plus votées
-              most_commented: Les plus commentées
-              most_followed: Les plus suivies
-              with_more_authors: Avec le plus d'auteurs
-            proposal_edit_time: Durée d'édition des propositions
-            proposal_edit_time_choices:
-              infinite: Autoriser l'édition des propositions pour une durée infinie
+    events:
       budgets:
-        settings:
-          global:
-            vote_per_category: Activer le "Vote par catégorie requise"
-            vote_rule_group_1_maximum_budget_projects_enabled: "Activer la règle de vote : Nombre maximum de projets"
-            vote_rule_group_1_minimum_budget_projects_enabled: "Activer la règle de vote : Nombre minimum de projets"
-            vote_rule_threshold_percent_enabled: "Activer la règle de vote : Pourcentage du budget"
-      cookies:
-        jsessionid:
-          description: Le cookie JSESSIONID permet de sauvegarder un identifiant de session. Celui-ci est nécessaire pour permettre à New Relic de monitorer la session.
-    devise:
-      registrations:
-        new:
-          sign_up_as:
-            user: Citoyen
-          subtitle: Inscrivez-vous pour participer et débattre sur la plateforme.
-    menu:
-      assemblies: Agora
-      processes: Participations en cours
-    participatory_process_groups:
-      show:
-        group_participatory_processes: 'Participations pour %{group}'
-        title: Groupes de participations
-    participatory_process_steps:
-      index:
-        process_steps: Etapes de la participation
-        title: Etapes de la participation
-    participatory_processes:
-      admin:
-        participatory_process_copies:
-          form:
-            slug_help: 'Les identifiants d''URL sont utilisés pour générer les URL qui envoient vers cette participation. N''accepte que des lettres, des chiffres et des tirets et doit commencer par une lettre. Exemple: %{url}'
-        participatory_processes:
-          form:
-            slug_help: 'Les identifiants d''URL sont utilisés pour générer les URL qui envoient vers cette participation. N''accepte que des lettres, des chiffres et des tirets et doit commencer par une lettre. Exemple: %{url}'
-      index:
-        title: Participations
-      order_by_processes:
-        active: Actives
-        all: Toutes
-        past: Passées
-      pages:
-        home:
-          highlighted_processes:
-            active_processes: Participations en cours
-            see_all_processes: Voir toutes les participations
-      statistics:
-        processes_count: Participations
+        pending_order:
+          email_intro: The vote on budget "%{resource_title}" is not confirmed yet in "%{participatory_space_title}".
+          email_outro: You have received this notification because you are participating in "%{participatory_space_title}"
+          email_subject: Your vote is still pending in %{participatory_space_title}
+          notification_title: The vote on budget <a href="%{resource_path}">%{resource_title}</a> is still waiting for your confirmation in %{participatory_space_title}
+    meetings:
+      directory:
+        meetings:
+          index:
+            all: All
+      meeting:
+        not_allowed: You are not allowed to view this meeting
+      meetings:
+        create:
+          invalid: There was a problem creating this meeting.
+          success: You have created the meeting successfully.
+        update:
+          invalid: There was a problem updating the meeting.
+          success: You have updated the meeting successfully.
     proposals:
-      models:
-        proposal:
-          fields:
-            scope: Secteur géographique
-    scopes:
-      global: Toute la ville
-      prompt: Sélectionnez un secteur géographique
-      scopes: Secteur géographique
+      create:
+        error: Il y a eu des erreurs lors de la sauvegarde de la proposition.
+        success: Proposition créée avec succès. Enregistrée comme brouillon.
+      destroy_draft:
+        error: Des erreurs sont survenues lors de la suppression du brouillon de la proposition.
+        success: Le brouillon de la proposition a bien été supprimé.
+      proposals:
+        compare:
+          no_similars_found: Bien joué ! Aucune proposition similaire n'a été trouvée
+      publish:
+        error: Il y a eu des erreurs lors de la publication de la proposition.
+        success: Proposition publiée avec succès.
+      update:
+        error: Des erreurs se sont produites lors de l'enregistrement de la proposition.
+        success: Proposition mise à jour avec succès.
+      update_draft:
+        error: Des erreurs sont survenues lors de l'enregistrement du brouillon de la proposition.
+        success: Le brouillon de proposition a été mis à jour.
+      withdraw:
+        errors:
+          has_supports: Cette proposition ne peut pas être retirée car elle dispose déjà de supports.
     verifications:
       authorizations:
         first_login:
           actions:
-            angers_authorization_handler: Vérifier avec le formulaire de vérification de l'identité
-            angers_authorization_workflow: Vérifier avec le formulaire de vérification de l'identité
             osp_authorization_handler: Vérifier avec le formulaire de vérification de l'identité
             osp_authorization_workflow: Vérifier avec le formulaire de vérification de l'identité
-  devise:
-    failure:
-      user:
-        already_authenticated: Vous êtes déjà connecté.
-        inactive: Votre compte n'est pas encore activé.
-        invalid: "%{authentication_keys} ou mot de passe invalide."
-        invited: Vous avez une invitation en attente, acceptez-la pour terminer la création de votre compte.
-        last_attempt: Vous avez encore une tentative avant que votre compte soit verrouillé.
-        locked: Ton compte est bloqué.
-        not_found_in_database: "%{authentication_keys} ou mot de passe invalide."
-        timeout: Votre session a expiré. Veuillez vous connecter à nouveau pour continuer.
-        unauthenticated: Vous devez vous connecter ou vous inscrire avant de continuer.
-  forms:
-    length_validator:
-      minimum:
-        other: Au moins %{count} caractères
   layouts:
     decidim:
-      assemblies:
-        index:
-          promoted_assemblies: Agora mise en avant
-        order_by_assemblies:
-          assemblies:
-            one: '%{count} agora'
-            other: '%{count} agora'
-      assembly_header:
-        assembly_menu_item: Présentation
       footer:
         download_open_data: Données ouvertes
-      participatory_processes:
-        index:
-          promoted_processes: Participations mises en avant
-        order_by_processes:
-          processes:
-            one: '%{count} participation'
-            other: '%{count} participations'
-      process_header:
-        process_menu_item: Présentation
-  pages:
-    home:
-      extended:
-        how_to_participate: Comment participer ?
-      statistics:
-        processes_count: Participations
-        assemblies_count: Agora
+        made_with_open_source: Site réalisé par <a target="_blank" href="https://opensourcepolitics.eu">Open Source Politics</a> grâce au <a target="_blank" href="https://github.com/decidim/decidim">logiciel libre Decidim</a>.
+        revoke_cookies: Révoquer les cookies
+      header:
+        close_menu: Fermer
+        navigation: Navigation
+        sign_in: Se connecter
+        sign_up: S'inscrire
+      user_menu:
+        account: Mon compte
+        conversations: Conversations
+        notifications: Notifications
