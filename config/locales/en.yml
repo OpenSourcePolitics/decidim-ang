@@ -95,6 +95,11 @@ en:
       - EN7
       - EN8
       - EN9
+  forms:
+    length_validator:
+      minimum:
+        one: At least %{count} character
+        other: At least %{count} characters
   layouts:
     decidim:
       footer:

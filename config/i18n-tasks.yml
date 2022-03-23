@@ -97,3 +97,4 @@ ignore_unused:
   - decidim.verifications.authorizations.first_login.actions.osp_authorization_handler
   - decidim.verifications.authorizations.first_login.actions.osp_authorization_workflow
   - layouts.decidim.user_menu.account
+  - forms.length_validator.minimum.*
