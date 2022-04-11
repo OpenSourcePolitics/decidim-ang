@@ -8,7 +8,6 @@ Decidim.configure do |config|
     repo: `basename \`git rev-parse --show-toplevel\``.strip
   }
 
-  config.skip_first_login_authorization = ENV["SKIP_FIRST_LOGIN_AUTHORIZATION"] ? ActiveRecord::Type::Boolean.new.cast(ENV["SKIP_FIRST_LOGIN_AUTHORIZATION"]) : true
   config.application_name = "Participation citoyenne Ville d'Angers"
   config.mailer_sender = "Participation citoyenne Ville d'Angers <participation-citoyenne@ville.angers.fr>"
 
